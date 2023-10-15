@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/toviasmac/Documents/GitHub/ComputerGraphic/Assignment 1 - RGB Cube",
+      "program": "/Users/toviasmac/Documents/GitHub/ComputerGraphic/Assignment 1 - RGB Cube/build/Debug/outDebug"
+    }
+  ]
+}
