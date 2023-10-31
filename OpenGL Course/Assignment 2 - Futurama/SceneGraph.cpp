@@ -7,11 +7,11 @@
                    htw berlin
    ------------------------------------------------------------- */
 
-#include "GLIncludes.hpp"
+#include "../GLIncludes.hpp"
 
 #include <iostream>
 
-#include "glm/glm.hpp"
+#include "../glm/glm.hpp"
 
 #include "SceneGraph.hpp"
 

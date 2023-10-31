@@ -6,22 +6,22 @@
                    htw berlin
    ------------------------------------------------------------- */
 
-#include "GLIncludes.hpp"
+#include "../GLIncludes.hpp"
 
 #include <iostream>
 #include <iomanip> 
 #include <sstream>
 
 #include "Futurama.hpp"
-#include "Context.hpp"
-#include "Input.hpp"
+#include "../Context.hpp"
+#include "../Input.hpp"
 #include "Robot.hpp"
 
 #include "../LightSource.h"
 
 #define GLM_FORCE_RADIANS
-#include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
+#include "../glm/glm.hpp"
+#include "../glm/gtc/matrix_transform.hpp"
 
 // use this with care
 // might cause name collisions

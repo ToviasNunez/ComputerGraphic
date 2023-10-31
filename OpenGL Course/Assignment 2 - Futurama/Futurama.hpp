@@ -16,9 +16,9 @@
 
 #include "../glm/glm.hpp"
 
-#include "Context.hpp"
-#include "Input.hpp"
-#include "Application.hpp"
+#include "../Context.hpp"
+#include "../Input.hpp"
+#include "../Application.hpp"
 #include "SceneGraph.hpp"
 
 class Futurama : public OpenGLApplication{

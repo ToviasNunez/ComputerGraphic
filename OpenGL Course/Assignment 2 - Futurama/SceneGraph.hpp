@@ -10,8 +10,8 @@
    ------------------------------------------------------------- */
 
 #include "Node.hpp"
-#include "GLSL.hpp"
-#include "LightSource.h"
+#include "../GLSL.hpp"
+#include "../LightSource.h"
 
 class SceneGraph{
 

@@ -9,13 +9,13 @@
                    htw berlin
    ------------------------------------------------------------- */
 
-#include "glm/glm.hpp"
+#include "../glm/glm.hpp"
 
-#include "TriangleMesh.hpp"
-#include "GLSL.hpp"
+#include "../TriangleMesh.hpp"
+#include "../GLSL.hpp"
 
-#include "Material.h"
-#include "LightSource.h"
+#include "../Material.h"
+#include "../LightSource.h"
 
 // NOTE: each node in the scenegraph can have multiple 
 //       children/siblings by pointing to its first child via 

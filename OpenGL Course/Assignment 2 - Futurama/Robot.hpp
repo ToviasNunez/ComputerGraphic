@@ -10,8 +10,8 @@
    ------------------------------------------------------------- */
 
 #include "Node.hpp"
-#include "TriangleMesh.hpp"
-#include "GLSL.hpp"
+#include "../TriangleMesh.hpp"
+#include "../GLSL.hpp"
 
 class Robot{
 
