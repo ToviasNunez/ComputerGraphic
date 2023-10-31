@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/toviasmac/Library/CloudStorage/OneDrive-Persönlich/HTW-Berlin-2018-Angewandte-Informatik/Semester4/Computergrafik/WS23-24/U/OpenGL Course/Assignment 1 - RGB Cube",
+      "program": "/Users/toviasmac/Library/CloudStorage/OneDrive-Persönlich/HTW-Berlin-2018-Angewandte-Informatik/Semester4/Computergrafik/WS23-24/U/OpenGL Course/Assignment 1 - RGB Cube/build/Debug/outDebug"
+    }
+  ]
+}

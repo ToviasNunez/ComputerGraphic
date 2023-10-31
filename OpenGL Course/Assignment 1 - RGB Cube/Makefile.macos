@@ -1,0 +1,19 @@
+EXECUTABLE = RGBCube
+CC = g++
+CPPFLAGS = -g -O3 -DGL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED -I../ -I/opt/X11/include -std=c++11 
+DEPS = Log.hpp GLError.hpp Context.hpp Window.hpp Input.hpp Application.hpp Mouse.hpp Keyboard.hpp Material.h LighSource.h GLSLShader.hpp TriangleMesh.hpp Texture.hpp RGBCube.hpp
+OBJ = ../GLError.o ../Window.o ../Application.o ../Keyboard.o ../TriangleMesh.o ../GLSL.o RGBCube.o
+LDFLAGS = -L/opt/X11/lib
+LIBS= -framework OpenGL -lglew -lglut
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CPPFLAGS)
+
+$(EXECUTABLE): $(OBJ)
+	$(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
+
+.PHONY: clean
+
+clean:
+	rm -f *.o ../*.o *~ $(EXECUTABLE)		
+
