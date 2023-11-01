@@ -154,9 +154,9 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 // reset rotations
 void RGBCube::reset(void){
 
-  RGBCube::yAngle = glm::radians(1.0f);
-  RGBCube::xAngle = glm::radians(1.0f);
-  RGBCube::zAngle = glm::radians(1.0f);
+  RGBCube::yAngle = glm::radians(0.0f);
+  RGBCube::xAngle = glm::radians(0.0f);
+  RGBCube::zAngle = glm::radians(0.0f);
   Context::window->redisplay(); // Ruft die display-Funktion auf, um die Änderungen anzuzeigen
   // TODO: reset euler angles and rotationMatrix
 }
@@ -233,6 +233,9 @@ void RGBCube::menu(int value){
   case Menu::EULER:
     euler= !euler;
      Context::window->redisplay();
+     break;
+      case Menu::RESET:
+     reset();
      break;
      // TODO: reset rotations
   default: return; 

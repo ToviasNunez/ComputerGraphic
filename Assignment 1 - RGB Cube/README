@@ -9,7 +9,7 @@ g++ -std=c++11 -o RGBCube.macos RGBCube.cpp Window.hpp  -framework OpenGL -lGLEW
 
 
 
-1. Callbacks (1 Punkt)
+DONE 1. Callbacks (1 Punkt)
 Registrieren Sie in der Funktion startEventloop der Klasse InputManager in der Datei Input.cpp
 den display-Callback Ihrer Application-Klasse (RGBCube.cpp) sowie den keyPressed-Callback. Fügen
 Sie dazu folgende Codezeilen ein:
@@ -24,7 +24,7 @@ R-> add this two fuc to the Input.cpp  inside
 
 
 
-2. Tiefenpuffer (1 Punkte)
+DONE 2. Tiefenpuffer (1 Punkte)
 Der Würfel, der sich nun auf dem Bildschirm zeigt, sieht “kaputt” aus. Was könnte die Ursache sein?
 Vergleichen Sie mit dem Würfel in der Musterlösung!
 Hinweise: Sie können in der mitgelieferten Demo mit der Taste d zwischen der “kaputten” und der
@@ -41,7 +41,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 Hinweis: Versuchen Sie einmal, GL_LESS mit GL_GREATER zu ersetzen und glClearDepth 0 zu übergeben.
 Was ist der Effekt?
 1 of 3
-3. Drehung (1 Punkt)
+DONE 3. Drehung (1 Punkt)
 Nachdem der Würfel nun korrekt angezeigt wird, wollen wir ihn rotiert darstellen. Versuchen Sie eine
 Rotation von 45 Grad um die Y-Achse. Diese sollte in etwa so aussehen:
 modelMatrix*= glm::rotate(<angle>, <axis>);
@@ -51,20 +51,21 @@ wobei Sie den Winkel, repräsentiert durch eine Zahl, und die Achse, repräsenti
 Hinweis: Die Funktion glm::radians könnte von Nutzen sein.
 
 
-4. Tastaturinput: (1 Punkt)
+DONE 4. Tastaturinput: (1 Punkt)
 Erstellen Sie in der Datei RGBCube.cpp eine neue Variable angle vom Typ float und inkremetieren/
 dekrementieren Sie sie im keyPressed-Callback mit Hilfe der Tasten y (Rotation gegen den
 Uhrzeigersinn) bzw. Y (Rotation im Uhrzeigersinn). Es reicht aus, wenn Sie im globalen Scope (also
 außerhalb der Funktionsdefinitionen) eine static Variable definieren (beachten Sie, dass dies vor
 dem ersten Zugriff auf die Variable geschehen muss):
 static float angle= 0;
+
 Das Schlüsselwort static besagt dabei, dass die Variable nur in dieser Datei sichtbar ist. Anders als
 bei globalen Variablen, die in sämtlichen Dateien des Projektes gelten, ist dadurch die Gefahr von
 Namenskollisionen gering. Der Würfel sollte nun rotierbar sein.
 Hinweis: Vergessen Sie nicht, mittels Context::window->redisplay(); ein Neuzeichnen des Fensters
 und damit einen erneuten Aufruf des display-Callbacks zu veranlassen! Sonst wird die Animation nicht
 sichtbar.
-5. Menüs (1 Punkt)
+DONE 5. Menüs (1 Punkt)
 Ergänzen Sie die vorgegebene reset-Funktion, so dass der Winkel auf 0 zurückgesetzt werden kann. Sie
 soll sowohl mittels Tippen von r auf der Tastatur, also auch mittels eines entsprechenden Menüeintrags
 aufgerufen werden können. Dazu müssen Sie in RGBCube.hpp ein Menu Item RESET hinzufügen und
@@ -74,13 +75,14 @@ Hinweis: Vergessen Sie nicht, mittels Context::window->redisplay(); jeweils wied
 des Fensters und damit einen erneuten Aufruf des display-Callbacks zu veranlassen! Sonst wird
 der Reset nicht sichtbar.
 
-6. Euler Winkel (1 Punkt)
+DONE 6. Euler Winkel (1 Punkt)
 Bisher kann unser Würfel nur um eine Achse rotieren. Eine naheliegende Idee ist es, drei Winkel statt
 des einen zur Rotation um alle drei Achsen zu benutzen (sog. Euler-Winkel). Ändern Sie den Typ
 der Variable angle in vec3. Fügen Sie, analog zur bereits implementierten Rotation um die y-Achse,
 zwei neue Zeilen zur Rotation um x- und z-Achse hinzu. Der Würfel sollte nun um alle drei Achsen
 rotierbar sein.
 Hinweis: Denken Sie daran, auch die reset-Funktion geeignet anzupassen!
+
 7. Gimbal Lock (1 Punkt)
 Leider ist diese Lösung nicht optimal und hat sogar schon Flugzeugabstürze verursacht. Demonstrieren
 Sie anhand ihres Programms den sog. Gimbal Lock (siehe Link auf Moodle), der daran schuld war!

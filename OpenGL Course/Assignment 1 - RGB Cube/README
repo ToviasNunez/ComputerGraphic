@@ -1,0 +1,17 @@
+
+/*
+compile:
+g++ -std=c++11 -o RGBCube.macos RGBCube.cpp ../TriangleMesh.cpp ../Application.cpp ../Window.cpp ../GLSL.cpp -framework OpenGL -lGLEW -lglut
+
+oder option 
+make -f Makefile.macos 
+
+Run :
+
+./RGBCube
+
+./RGBCube.macos
+
+
+
+*/
